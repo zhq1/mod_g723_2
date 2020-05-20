@@ -1,10 +1,13 @@
 
-BASE=../../../..
+#BASE=../../../..
+BASE=/usr/local/freeswitch  #freeswitch install
 
 TARGET = mod_g723_1.so
 
 LIBS = -L./libs -lpthread -lrt -lm
-INCLUDE = -I./g723 -I${BASE}/src/include -I${BASE}/libs/libteletone/src
+#INCLUDE = -I./g723 -I${BASE}/src/include -I${BASE}/libs/libteletone/src
+#INCLUDE = -I./g723 -I${BASE}/include -I${BASE}/include  ##v1.4
+INCLUDE = -I./g723 -I${BASE}/include/freeswitch -I${BASE}/include/freeswitch  ##v1.6
 
 CC = gcc
 CPP = gcc
